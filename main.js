@@ -14,7 +14,6 @@ if (localStorage.getItem('notes')) {
    removeBtn.classList.add('display__none')
 }
 
-
 form.addEventListener('click', (e) => {
    e.preventDefault()
 
@@ -33,16 +32,8 @@ form.addEventListener('click', (e) => {
    removeBtn.classList.remove('display__none')
 })
 
-// addNotesBtn.addEventListener('mouseover', () => {
-//    addNotesBtn.classList.add('active')
-// })
-// addNotesBtn.addEventListener('mouseout', () => {
-//    addNotesBtn.classList.remove('active')
-// })
-
 function render() {
    getEmptyPage()
-
    notes.forEach((el, i) => {
       listNode.insertAdjacentHTML('beforeend', noteTemplate(el, i))
    })
@@ -59,7 +50,6 @@ listNode.addEventListener('click', e => {
          localStorage.setItem('notes', JSON.stringify(notes))
       } else if (type === 'remove') {
          notes.splice(index, 1)
-         // localStorage.removeItem(`${notes.dataset.index}`)
       }
    }
    render()
@@ -70,7 +60,7 @@ function noteTemplate(notes, i) {
       <li class="notes__list-item" data-id ='${localStorage.length}'>
          <span data-index="${i}" data-type="toggle" class="notes__list-span-btn btn-check_${notes.completed ? 'blue' : 'transparent'}">&check;</span>
             <span class="notes__list-span-box">
-               <span class="${notes.completed ? 'notes__list-span_through' : ''}">${notes.title}</span>
+               <span class="${notes.completed ? 'notes__list-span_through' : 'notes__list-span_text'} ">${notes.title}</span>
                <span data-index="${i}" data-type="remove" class="notes__list-span-btn-close btn-close">&times;</span>
             </span>
       </li>
@@ -94,17 +84,3 @@ removeBtn.addEventListener('click', () => {
 
    removeBtn.classList.add('display__none')
 })
-
-// Решить проблему с кнопкой удалить все, чтобы исчезала когда есть надпись напишите нащвание...
-// Написать стили и убhать лишние строки кода на пример Math, если не найду способ сделать чекбоксы.
-// Проболжить с 4 задания урок 4
-
-function generateHTML(arr) {
-   let html = '';
-   for (let name of arr) { html += `<li>${name}</li>`; }
-   return `<ul>${html}</ul>`;
-}// вариант от yagpt
-
-
-
-
