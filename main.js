@@ -33,12 +33,12 @@ form.addEventListener('click', (e) => {
    removeBtn.classList.remove('display__none')
 })
 
-addNotesBtn.addEventListener('mouseover', () => {
-   addNotesBtn.classList.add('active')
-})
-addNotesBtn.addEventListener('mouseout', () => {
-   addNotesBtn.classList.remove('active')
-})
+// addNotesBtn.addEventListener('mouseover', () => {
+//    addNotesBtn.classList.add('active')
+// })
+// addNotesBtn.addEventListener('mouseout', () => {
+//    addNotesBtn.classList.remove('active')
+// })
 
 function render() {
    getEmptyPage()
