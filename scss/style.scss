@@ -14,7 +14,6 @@ html,
 body {
    height: 100%;
    font-size: 18px;
-   // font-family: 'Inter', sans-serif;
    font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -68,13 +67,7 @@ body {
       font-size: 15px;
       font-weight: 700;
       margin-bottom: 10px;
-      // font-family: 'Roboto Condensed', sans-serif;
       font-family: 'Inter', sans-serif;
-
-      &:hover {
-         background-color: #04ebeb;
-         color: #000;
-      }
    }
 
    &__list {
@@ -134,7 +127,6 @@ body {
       border-radius: 7px;
       color: #cd3636;
       padding: 10px;
-      // font-family: 'Roboto Condensed', sans-serif;
       font-family: 'Inter', sans-serif;
 
       &:hover {
@@ -166,4 +158,19 @@ body {
 
 .display__none {
    display: none;
+}
+
+.active:hover {
+   background-color: #04ebeb;
+   color: #000;
+}
+
+@media (max-width: 768px) {
+   .notes {
+      padding-top: 20px;
+
+      &__title {
+         font-size: 30px;
+      }
+   }
 }

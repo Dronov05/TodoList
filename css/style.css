@@ -95,10 +95,6 @@ body {
   margin-bottom: 10px;
   font-family: "Inter", sans-serif;
 }
-.notes__btn:hover {
-  background-color: #04ebeb;
-  color: #000;
-}
 .notes__list {
   list-style: none;
   margin-bottom: 10px;
@@ -188,4 +184,18 @@ body {
 
 .display__none {
   display: none;
+}
+
+.active:hover {
+  background-color: #04ebeb;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .notes {
+    padding-top: 20px;
+  }
+  .notes__title {
+    font-size: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
