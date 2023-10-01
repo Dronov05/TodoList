@@ -14,7 +14,7 @@ if (localStorage.getItem('notes')) {
    removeBtn.classList.add('display__none')
 }
 
-form.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
    e.preventDefault()
 
    if (inputNode.value.length === 0) { return }
