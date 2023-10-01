@@ -1,7 +1,9 @@
 const inputNode = document.querySelector('.notes__input')
 const listNode = document.querySelector('.notes__list')
 const form = document.querySelector('.notes__form')
+const addNotesBtn = document.querySelector('.notes__btn')
 const removeBtn = document.querySelector('.notes__btn-close')
+
 let notes
 
 if (localStorage.getItem('notes')) {
@@ -29,6 +31,13 @@ form.addEventListener('click', (e) => {
    inputNode.value = ''
 
    removeBtn.classList.remove('display__none')
+})
+
+addNotesBtn.addEventListener('mouseover', () => {
+   addNotesBtn.classList.add('active')
+})
+addNotesBtn.addEventListener('mouseout', () => {
+   addNotesBtn.classList.remove('active')
 })
 
 function render() {
