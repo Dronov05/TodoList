@@ -189,6 +189,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  cursor: pointer;
 }
 .notes__btn-close:active {
   background-color: #cd3636;
